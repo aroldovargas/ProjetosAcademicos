@@ -25,9 +25,6 @@ Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI
 
 >https://docs.google.com/document/d/1U9oatLB6h2kmdlpuAD0FwOb4RMBK0e6cGKfZgt446dI/edit
 
-### ESTATÍSTICAS CRIMINAIS:
-
-
 ### SOFTWARES UTILIZADOS
 >Protótipo das telas: https://balsamiq.com<br>
 >Diagrama de classes: http://astah.net<br>
