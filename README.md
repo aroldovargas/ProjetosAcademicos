@@ -10,7 +10,7 @@
 >A ideia do projeto é traçar uma rota de deslocamento segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com rotas válidas no estado do Espírito Santo.
 
 ### 3. CANVAS
-![Alt text](https://github.com/aroldovargas/CaminhoSeguro/blob/master/PMC.JPG?raw=true "Title")<br>
+![Alt text](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/PMC.png?raw=true "Title")<br>
 Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI4rDIjygWc7rldz045FclJ4s/edit#slide=id.p
 
 ### 4. MOCKUPS - PROTÓTIPO DAS TELAS
