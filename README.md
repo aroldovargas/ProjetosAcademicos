@@ -18,7 +18,7 @@ Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI
 
 
 ### 5. DIAGRAMA DE CLASSES
-![Alt text](https://github.com/aroldovargas/CaminhoSeguro/blob/master/Diagrama_v1.1.png)
+![Alt text](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/DiagramadeClassesProjetosAcademicos%20(2).JPG)
 
 ### DIÁRIO DE BORDO:
 
