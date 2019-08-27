@@ -22,7 +22,7 @@ Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI
 
 ### DIÁRIO DE BORDO:
 
->https://docs.google.com/document/d/11e3X0205oprL_9fXm3Okc50K4vjfuiq8QTe8evD3PT8/edit?usp=sharing
+>https://docs.google.com/document/d/1U9oatLB6h2kmdlpuAD0FwOb4RMBK0e6cGKfZgt446dI/edit
 
 ### ESTATÍSTICAS CRIMINAIS:
 
@@ -30,4 +30,3 @@ Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI
 ### SOFTWARES UTILIZADOS
 >Protótipo das telas: https://balsamiq.com<br>
 >Diagrama de classes: http://astah.net<br>
->IDE utilizada: https://netbeans.org<br>
