@@ -7,7 +7,8 @@
 
 ### 2. DESCRIÇÃO DO PROJETO:
 
->A ideia do projeto é traçar uma rota de deslocamento segura para usuário, baseando-se nos índices de criminalidade de uma determinada região. O sistema analisará o horário e o local de menor criminalidade das ruas nas rotas existentes até o destino inserido pelo usuário, e determinará, baseado em dados estatísticos, a melhor rota de deslocamento. Os dados estatísticos serão oriundos da Secretaria de Estado de Segurança Pública e Defesa Social (SESP) e o sistema atuará somente com rotas válidas no estado do Espírito Santo.
+>Um sistema Web que fornece informações sobre os projetos desenvolvidos dentro do IFES - Campus Serra. Ele armazenará informações referentes a dados técnicos do projeto, pessoas que estão envolvidas, competições e eventos as quais já participou ou irá participar, além de possuir vídeos, fotos, comentários dos autores e usuários,  quando possível. 
+Além de ter uma área dedicada a informar se o projeto está em desenvolvimento ou finalizado, caso esteja em desenvolvimento terá a possibilidade de visualizar as vagas para o mesmo.
 
 ### 3. CANVAS
 ![Alt text](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/PMC.png?raw=true "Title")<br>
