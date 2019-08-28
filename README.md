@@ -21,11 +21,11 @@ Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI
 
 ### 5. DIAGRAMA DE CLASSES
 
-![Alt text](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/DiagramadeClassesProjetosAcademicos%20(2).JPG)
+![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/DiagramadeClassesProjetosAcademicos%20(2).JPG)
 
 ### DIÁRIO DE BORDO:
 
->https://docs.google.com/document/d/1U9oatLB6h2kmdlpuAD0FwOb4RMBK0e6cGKfZgt446dI/edit
+- [Diário de Bordo](https://docs.google.com/document/d/1U9oatLB6h2kmdlpuAD0FwOb4RMBK0e6cGKfZgt446dI/edit)
 
 ### SOFTWARES UTILIZADOS
 >Protótipo das telas: https://balsamiq.com<br>
