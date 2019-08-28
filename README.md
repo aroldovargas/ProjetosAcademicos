@@ -21,7 +21,7 @@ Além de ter uma área dedicada a informar se o projeto está em desenvolvimento
 
 ### 5. DIAGRAMA DE CLASSES
 
-![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/DiagramadeClassesProjetosAcademicos%20(2).JPG)
+![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/Diagrama%20-%20Projetos_Academicos.png)
 
 ### DIÁRIO DE BORDO:
 
