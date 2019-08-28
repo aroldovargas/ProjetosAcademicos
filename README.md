@@ -15,10 +15,12 @@ Além de ter uma área dedicada a informar se o projeto está em desenvolvimento
 Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI4rDIjygWc7rldz045FclJ4s/edit#slide=id.p
 
 ### 4. MOCKUPS - PROTÓTIPO DAS TELAS
-![Alt text](https://github.com/aroldovargas/menu_inicial.JPG?raw=true "Title")
+
+- [Prototipos das Telas](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/Archive.pdf)
 
 
 ### 5. DIAGRAMA DE CLASSES
+
 ![Alt text](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/DiagramadeClassesProjetosAcademicos%20(2).JPG)
 
 ### DIÁRIO DE BORDO:
