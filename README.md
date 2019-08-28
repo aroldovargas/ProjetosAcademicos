@@ -2,8 +2,8 @@
 
 ### 1. COMPONENTES
 > Aroldo Vargas: aroldovneto@gmail.com<br>
-> Bruno Moreto :<br>
-> Lucas:<br>
+> Bruno Moreto : brunomoretodeoliveira2@gmail.com<br>
+> Lucas Garcia: lucasoliveiragarcia@live.com<br>
 
 ### 2. DESCRIÇÃO DO PROJETO:
 
