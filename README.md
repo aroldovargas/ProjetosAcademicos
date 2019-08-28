@@ -11,8 +11,8 @@
 Além de ter uma área dedicada a informar se o projeto está em desenvolvimento ou finalizado, caso esteja em desenvolvimento terá a possibilidade de visualizar as vagas para o mesmo.
 
 ### 3. CANVAS
+- [Link do PMC CANVAS](https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI4rDIjygWc7rldz045FclJ4s/edit#slide=id.p)
 ![Alt text](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/PMC.png?raw=true "Title")<br>
-Link do PMC CANVAS: https://docs.google.com/presentation/d/1PWpPU6M-dVkSYbR2_PsI4rDIjygWc7rldz045FclJ4s/edit#slide=id.p
 
 ### 4. MOCKUPS - PROTÓTIPO DAS TELAS
 
