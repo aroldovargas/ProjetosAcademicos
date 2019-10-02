@@ -26,7 +26,7 @@
 
 ### DIÁRIO DE BORDO:
 
-- [Diário de Bordo](https://docs.google.com/document/d/1U9oatLB6h2kmdlpuAD0FwOb4RMBK0e6cGKfZgt446dI/edit)
+- [Diário de Bordo](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/DI%C3%81RIO%20DE%20BORDO.pdf)
 
 ### SOFTWARES UTILIZADOS
 >Protótipo das telas: https://balsamiq.com<br>
