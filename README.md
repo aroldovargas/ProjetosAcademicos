@@ -23,6 +23,9 @@
 ### 5. DIAGRAMA DE CLASSES
 
 ![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetoAcademicosLogicov6.png)
+### SCRIPT DE CRIAÇÃO DO BANCO NO POSTGRESQL
+
+- [Script de Criação do Banco no PostgreSQL](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ScriptCriacaoBancoProjetosAcademicos.txt)
 
 ### DIÁRIO DE BORDO:
 
