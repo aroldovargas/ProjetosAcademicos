@@ -17,10 +17,12 @@
 
 - [Prototipos das Telas](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/Archive.pdf)
 
+### 5. MODELO CONCEITUAL
+![Modelo Conceitual](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetosAcademicosv5.png)
 
 ### 5. DIAGRAMA DE CLASSES
 
-![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/Diagrama%20-%20Projetos_Academicos.png)
+![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetoAcademicosLogicov6.png)
 
 ### DIÁRIO DE BORDO:
 
