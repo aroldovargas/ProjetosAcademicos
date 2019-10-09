@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arquivo IFES</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+</head>
+<script>
+$(document).ready(function() {
+    $('input[type=radio]').change(function() {
+        if (this.value == 'Aluno') {
+            $("#curso").css("display","block");
+        }
+        else if (this.value == 'Professor') {
+            $("#curso").css("display","none");
+        }
+    });
+});
+</script>
+<body>
+	<form id="login" action="login.php" method="POST">
+	<div class="login-page">
+		<div class="container" align="center">
+			<div class="row">
+				<img src="imagens/logo2.png" alt="some text" width=100 height=100 style="margin-top: 8%">
+				<h2 style="margin-top: 1%;font-family: Fantasy;font-size: 50px;color: #DEB887;">Arquivo IFES</h2>
+			</div>
+	  		<div class="row" style="padding-top: 4%;margin-left: 36%;" align="left">
+		        <label for="email" style="color: #DEB887;">E-mail </label>
+		        <input style="width: 30%" type="email" id="email" name="email"/>
+		    </div>
+			<div class="row" style="padding-top: 1%;margin-left: 36%;" align="left">
+		        <label for="senha" style="color: #DEB887;">Senha</label>
+		        <input style="width: 30%" type="password" id="senha" name="senha"/>
+		    </div>
+		    <div class="row" style="padding-top: 4%">
+				<button value="entrar" id="entrar" name="entrar" class="btn btn-info btn-lg" style="background-color: #109407; border-color: #109407;width: 20%;">Entrar</button>
+		    </div>
+		    <div class="row" style="padding-top: 2%">
+				<a class="btn btn-info btn-lg" style="background-color: #109407; border: none;width: 20%;" href="home_visitante.html">Entrar como visitante</a>	    
+		    </div>
+		    <div class="row" style="padding-top: 2%">
+		   		<a data-toggle="modal" data-target="#myModal" href="#myModal" style="color: #DEB887;">Ainda não possui cadastro? Clique aqui.</a>	
+		    </div>
+		</div>
+	</div>
+</form>
+
+<div class="modal fade " id="myModal" role="dialog">
+	<div class="modal-dialog">		     
+	  	<div class="modal-content" align="left">
+		    <div class="modal-header">
+		      	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		      	<h4 class="modal-title">Cadastro</h4>
+		    </div>
+		    <form id="cadastro" action="cadastro.php" method="POST"> 
+		    	<div class="modal-body" style="padding-top: 2%">
+			        <label for="nome_cadastro">Nome</label>
+			        <input style="width: 50%" type="text" id="nome_cadastro" name="nome_cadastro"></input>
+			    </div>
+			    <div class="modal-body" style="padding-top: 2%">
+			        <label for="email_cadastro">E-mail</label>
+			        <input style="width: 50%" type="email" id="email_cadastro" name="email_cadastro"></input>
+			    </div>
+			    <div class="modal-body" style="padding-top: 2%">
+			        <label for="matricula_cadastro">Matricula</label>
+			        <input type="text" id="matricula_cadastro" name="matricula_cadastro"></input>
+			    </div>
+			    <div class="modal-body" style="padding-top: 2%">
+			        <label for="data_nascimento_cadastro">Data de Nascimento</label>
+			        <input type="date" id="data_nascimento_cadastro" name="data_nascimento_cadastro"></input>
+			    </div>
+			    <div class="modal-body" style="padding-top: 2%">
+			        <label for="senha">Senha</label>
+			        <input type="password" minlength="4" id="senha_cadastro" name="senha_cadastro"></input>			      
+			    </div>
+			   	<div class="modal-body" style="padding-top: 2%" align="left">
+			   		<label for="funcao_cadastro">Função</label>
+			    	<input type="radio" id="funcao_cadastro" name="funcao_cadastro" value="Professor">Professor
+					<input style="margin-left: 2%" type="radio" id="funcao_cadastro" name="funcao_cadastro" value="Aluno">Aluno<br>
+				</div>
+					<div class="modal-body" id="curso_cadastro" style="padding-top: 2%">
+				        <label for="curso_cadastro">Curso</label>
+				        <select size="1" name="curso_cadastro" class="form-control" id="curso_cadastro" style="width: 60%">
+						    <option value="">Selecione um curso...</option>
+						    <option value="Sistemas de Informação">Sistemas de Informação</option>
+						    <option value="Enegnharia de Controle e Automação">Enegnharia de Controle e Automação</option>
+						    <option value="Automação Industrial">Automação Industrial</option>
+						    <option value="Informática">Informática</option>
+						    <option value="Mecatrônica">Mecatrônica</option>
+						    <option value="Computação Aplicada">Computação Aplicada</option>
+					    </select>
+			    </div>
+			<div class="modal-footer">
+	          	<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+	          	<button type="submit" class="btn btn-default">Criar conta</button>
+	        </div>
+			</form>
+	    </div>	
+	 </div>
+</div>
+
+</body>
+
+</html>
+
