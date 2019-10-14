@@ -18,11 +18,11 @@
 - [Prototipos das Telas](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/TELAS/Archive.pdf)
 
 ### 5. MODELO CONCEITUAL
-![Modelo Conceitual](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetosAcademicosv5.png)
+![Modelo Conceitual](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetosAcademicosConceitualv7.png)
 
 ### 5. DIAGRAMA DE CLASSES
 
-![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetoAcademicosLogicov6.png)
+![Diagrama de Clases](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ProjetosAcademicoLogicov7.png)
 ### SCRIPT DE CRIAÇÃO DO BANCO NO POSTGRESQL
 
 - [Script de Criação do Banco no PostgreSQL](https://github.com/aroldovargas/ProjetosAcademicos/blob/master/Arquivos/ScriptCriacaoBancoProjetosAcademicos.txt)
