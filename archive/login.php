@@ -1,8 +1,9 @@
 <?php
+session_start();
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$conn = mysqli_connect('mysql', 'root', '123.456','archive');
+$conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
 if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
@@ -10,15 +11,34 @@ if (!$conn) {
     exit;
 }
 
-$query = "SELECT * FROM usuario WHERE email = '$email'";
-$verifica = mysqli_query($conn,$query);
-$array = mysqli_fetch_array($verifica);
+$query_usuario = "SELECT * FROM Usuario WHERE email = '$email'";
+$verifica_usuario = mysqli_query($conn,$query_usuario);
+$array = mysqli_fetch_array($verifica_usuario);
 
-$nome = $array["nome"];
+//professor = 1 aluno =2 administrador =0
+
+if($array["fk_Tipo_Usuario_id"] == 2){
+	$id_professor = $array["id"];
+	$query_professor = "SELECT nome_prof FROM Professor WHERE id = '$id_professor'";
+	$verifica_professor = mysqli_query($conn,$query_professor);
+	$arrayUsuario = mysqli_fetch_array($verifica_professor);
+	$nome = $arrayUsuario["nome_prof"];
+}
+if($array["fk_Tipo_Usuario_id"] == 3){
+	$id_aluno = $array["id"];
+	$query_aluno = "SELECT nome_aluno FROM Aluno WHERE id = '$id_aluno'";
+	$verifica_aluno = mysqli_query($conn,$query_aluno);
+	$arrayUsuario = mysqli_fetch_array($verifica_aluno);
+	$nome = $arrayUsuario["nome_aluno"];
+}
+
+if($array["fk_Tipo_Usuario_id"] == 1){
+	$nome = "Admin";
+}
+
 $senhadb = $array["senha"];
 
 if ($senhadb == $senha){
-	session_start();
 	$_SESSION['nome'] = $nome;
 	$_SESSION['email'] = $email;
 	header("Location:home.php");
