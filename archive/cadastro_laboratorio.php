@@ -31,8 +31,8 @@ if($nome == "" || $nome == null || $descricao == "" || $descricao == null || $si
 	  if($sigla_base == $sigla){
 
 	    echo"<script language='javascript' type='text/javascript'>
-	    alert('Esse Laboratório já está cadastrado');</script>";
-    	echo"<script language= 'JavaScript'>location.href='/archive/login.html'</script>";
+	    alert('Esse laboratório já está cadastrado');</script>";
+    	echo"<script language= 'JavaScript'>location.href='/archive/laboratorios.php'</script>";
 
 	    // die();
 
@@ -41,7 +41,10 @@ if($nome == "" || $nome == null || $descricao == "" || $descricao == null || $si
 		$insert = mysqli_query($conn,$sql);
 
 	    if($insert){
-	     	header("Location:laboratorios.php");
+	    	echo"<script language='javascript' type='text/javascript'>
+		    alert('Laboratório inserido com sucesso!');</script>";
+	    	echo"<script language= 'JavaScript'>location.href='/archive/laboratorios.php'</script>";
+		    // header("Location:laboratorios.php");
 	    }else{
 	    	header("Location:erro.html");
 	    }

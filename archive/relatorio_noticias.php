@@ -1,4 +1,31 @@
-<?php session_start();?>
+<?php
+session_start();
+
+$tipo_noticia = utf8_decode($_POST["tipo_noticia"]);
+$data = $_POST["data"];
+
+#$data_inicio = $_POST["data_inicio"];
+#$data_fim = $_POST["data_fim"];
+
+//Conexao com o banco de dados
+$conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
+if (!$conn) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+    exit;
+}
+
+if($tipo_noticia == "" || $tipo_noticia == null || $data == "" || $data == null){
+    echo"<script language='javascript' type='text/javascript'>
+    alert('Favor preencher todos os campos');</script>";
+    echo"<script language= 'JavaScript'>location.href='/archive/noticias.php'</script>";
+	}
+
+mysqli_close($conn);
+
+?>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -67,7 +94,7 @@
 				<button data-toggle="modal" data-target="#myModalRelatorioN" href="#myModalRelatorioN" id="btnCrud">Emitir Relatório</button>
 			</div>
 		</div>
-		<div class="row" style="font-family: fantasy;">
+		<div class="row">
 			<?php
 				$conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
 				if (!$conn) {
@@ -76,28 +103,54 @@
 				    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
 				    exit;
 				}
-				$query_select = "SELECT * FROM Noticia";
-				$pularlinha = "\n";
-				if ($result = $conn->query($query_select)) {
-					while ($row = $result->fetch_row()) {
-						//pegando nome laboratorio
-						$id_laboratorio = $row[3];
-						$query_idLab = "SELECT nome_lab FROM Laboratorio WHERE id = '$id_laboratorio'";
-						$select = mysqli_query($conn,$query_idLab);
-						$array = mysqli_fetch_array($select);
-       					$nome_laboratorio = $array['nome_lab'];
-						//pegando nome projeto
-       					$id_projeto = $row[4];
-       					$query_idLab = "SELECT nome_projeto FROM Projeto WHERE id = '$id_projeto'";
-						$select = mysqli_query($conn,$query_idLab);
-						$array = mysqli_fetch_array($select);
-       					$nome_projeto = $array['nome_projeto'];
-       					echo nl2br($pularlinha);
-       					echo nl2br($pularlinha);
-       					printf ("TIPO : %s ".nl2br($pularlinha)." DESCRIÇÃO : %s ".nl2br($pularlinha)." \n",utf8_encode($row[2]),utf8_encode($row[1]));		
-    					//printf ("%s \n", $row);
-    				}
-    			}
+				if($tipo_noticia == "todos"){
+					$query_select = "SELECT * FROM Noticia";
+					$pularlinha = "\n";
+					if ($result = $conn->query($query_select)) {
+						while ($row = $result->fetch_row()) {
+							//pegando nome laboratorio
+							$id_laboratorio = $row[3];
+							$query_idLab = "SELECT nome_lab FROM Laboratorio WHERE id = '$id_laboratorio'";
+							$select = mysqli_query($conn,$query_idLab);
+							$array = mysqli_fetch_array($select);
+	       					$nome_laboratorio = $array['nome_lab'];
+							//pegando nome projeto
+	       					$id_projeto = $row[4];
+	       					$query_idLab = "SELECT nome_projeto FROM Projeto WHERE id = '$id_projeto'";
+							$select = mysqli_query($conn,$query_idLab);
+							$array = mysqli_fetch_array($select);
+	       					$nome_projeto = $array['nome_projeto'];
+	       					echo nl2br($pularlinha);
+	       					echo nl2br($pularlinha);
+	       					printf ("TIPO : %s ".nl2br($pularlinha)." DESCRIÇÃO : %s ".nl2br($pularlinha)." \n",utf8_encode($row[2]),utf8_encode($row[1]));		
+	    					//printf ("%s \n", $row);
+	    				}
+	    			}
+				}else{
+					$query_select = "SELECT * FROM Noticia WHERE tipo ='$tipo_noticia'";
+					$pularlinha = "\n";
+					if ($result = $conn->query($query_select)) {
+						while ($row = $result->fetch_row()) {
+							//pegando nome laboratorio
+							$id_laboratorio = $row[3];
+							$query_idLab = "SELECT nome_lab FROM Laboratorio WHERE id = '$id_laboratorio'";
+							$select = mysqli_query($conn,$query_idLab);
+							$array = mysqli_fetch_array($select);
+	       					$nome_laboratorio = $array['nome_lab'];
+							//pegando nome projeto
+	       					$id_projeto = $row[4];
+	       					$query_idLab = "SELECT nome_projeto FROM Projeto WHERE id = '$id_projeto'";
+							$select = mysqli_query($conn,$query_idLab);
+							$array = mysqli_fetch_array($select);
+	       					$nome_projeto = $array['nome_projeto'];
+	       					echo nl2br($pularlinha);
+	       					echo nl2br($pularlinha);
+	       					printf ("TIPO : %s ".nl2br($pularlinha)." DESCRIÇÃO : %s ".nl2br($pularlinha)." \n",utf8_encode($row[2]),utf8_encode($row[1]));		
+	    					//printf ("%s \n", $row);
+	    				}
+	    			}
+				}
+
 				?>
 		</div>
 	</div>
@@ -225,7 +278,7 @@
 		 </div>
 	</div>
 
-		<div class="modal fade " id="myModalRelatorioN" role="dialog">
+	<div class="modal fade " id="myModalRelatorioN" role="dialog">
 		<div class="modal-dialog">		     
 		  	<div class="modal-content" align="left">
 			    <div class="modal-header">
@@ -244,7 +297,7 @@
 				       	</select>
 				    </div>
 			    	<div class="modal-body" style="padding-top: 2%">
-				        <label for="data">Data</label>
+				        <label for="status_projeto">Data</label>
 				        <select style="width: 60%" type="text" id="data" name="data">
 				        	<option value="">Selecione uma data</option>
 				        	<option value="todos">TODOS</option>

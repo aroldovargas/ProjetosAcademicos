@@ -3,6 +3,11 @@ session_start();
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
+
+if($email == "admin@admin.com" || $senha=='admin'){
+	echo"<script language= 'JavaScript'>location.href='/archive/painel.php'</script>";
+}
+
 $conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
 if (!$conn) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -41,10 +46,12 @@ $senhadb = $array["senha"];
 if ($senhadb == $senha){
 	$_SESSION['nome'] = $nome;
 	$_SESSION['email'] = $email;
-	header("Location:home.php");
-	echo"<script language='javascript' type='text/javascript'>alert('Bem vindo');</script>";
+	// header("Location:home.php");
+	echo"<script language='javascript' type='text/javascript'>alert('Bem vindo, ".$nome."');</script>";
+	echo"<script language= 'JavaScript'>location.href='/archive/home.php'</script>";
 }else{
 	echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');</script>";
+	echo"<script language= 'JavaScript'>location.href='/archive/login.html'</script>";
 }
 
 // if (isset($email)) {
