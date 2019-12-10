@@ -54,16 +54,16 @@
 				<button data-toggle="modal" data-target="#myModalCadastro" href="#myModalCadastro" id="btnCrud">Cadastrar laboratório</button>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalEditar" href="#myModalEditar" id="btnCrud">Editar laboratório</button>
 			</div>
-		</div>
-		<div class="row">
+		</div> -->
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalDelete" href="#myModalDelete" id="btnCrud">Excluir laboratório</button>
 			</div>
-		</div>
+		</div> -->
 		<div class="row" align="left">
 			
 			<?php

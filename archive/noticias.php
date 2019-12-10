@@ -52,7 +52,7 @@
 				<button data-toggle="modal" data-target="#myModalCadastro" href="#myModalCadastro" id="btnCrud">Cadastrar notícia</button>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalEditar" href="#myModalEditar" id="btnCrud">Editar notícia</button>
 			</div>
@@ -61,13 +61,13 @@
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalExcluir" href="#myModalExcluir" id="btnCrud">Excluir notícia</button>
 			</div>
-		</div>
+		</div> -->
 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalRelatorioN" href="#myModalRelatorioN" id="btnCrud">Emitir Relatório</button>
 			</div>
 		</div>
-		<div class="row" style="font-family: fantasy;">
+		<div class="row" style="font-family: fantasy;margin-top: -5%;margin-bottom: 5%">
 			<?php
 				$conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
 				if (!$conn) {

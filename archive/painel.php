@@ -7,6 +7,11 @@ if (!$conn) {
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
+$query_professor = "SELECT COUNT(*) FROM Professor;";
+$verifica_professor = mysqli_query($conn,$query_professor);
+$array_professor = mysqli_fetch_array($verifica_professor);
+$total_professor = $array_professor[0];
+
 $query_projeto = "SELECT COUNT(*) FROM Projeto;";
 $verifica_projeto = mysqli_query($conn,$query_projeto);
 $array = mysqli_fetch_array($verifica_projeto);
@@ -22,10 +27,12 @@ $verifica_aluno = mysqli_query($conn,$query_aluno);
 $array_aluno = mysqli_fetch_array($verifica_aluno);
 $total_alunos = $array_aluno[0];
 
-$query_professores = "SELECT COUNT(*) FROM Professor;";
-$verifica_professores = mysqli_query($conn,$query_professores);
-$array_professores = mysqli_fetch_array($verifica_professores);
-$total_professores = $array_professores[0];
+// $query_professor = "SELECT COUNT(*) FROM Professor;";
+// $verifica_professor = mysqli_query($conn,$query_professor);
+// $array_professor = mysqli_fetch_array($verifica_professor);
+// $total_professor = $array_professor[0];
+
+
 
 ?>
 
@@ -69,17 +76,17 @@ $total_professores = $array_professores[0];
 				    <h5 class="card-title" style="font-size: 36px;"><?echo $total_alunos?></h5>
 				    <p class="card-text">Alunos cadastrados.</p>
 				  </div>
-				  <div class="card-footer"><a href="#" style="color: white">Gerenciar Alunos</a></div>
+				  <div class="card-footer"><a href="gerenciar_alunos.php" style="color: white">Gerenciar Alunos</a></div>
 				</div>
 			</div >
 			<div class="col-3">	
 				<div class="card text-white bg-secondary mb-3" style="max-width: 25rem;" align="center">
 				  <div class="card-header">Professores</div>
 				  <div class="card-body">
-				    <h5 class="card-title" style="font-size: 36px;"><?echo $total_professores?></h5>
+				    <h5 class="card-title" style="font-size: 36px;"><?echo $total_professor?></h5>
 				    <p class="card-text">Professores cadastrados.</p>
 				  </div>
-				  <div class="card-footer"><a href="#" style="color: white">Gerenciar Professores</a></div>
+				  <div class="card-footer"><a href="gerenciar_professores.php" style="color: white">Gerenciar Professores</a></div>
 				</div>
 			</div>
 			<div class="col-3">	
@@ -89,7 +96,7 @@ $total_professores = $array_professores[0];
 				    <h5 class="card-title" style="font-size: 36px;"><?echo $total_laboratorios?></h5>
 				    <p class="card-text">Laboratórios cadastrados.</p>
 				  </div>
-				  <div class="card-footer"><a href="#" style="color: white">Gerenciar Laboratórios</a></div>
+				  <div class="card-footer"><a href="gerenciar_laboratorios.php" style="color: white">Gerenciar Laboratórios</a></div>
 				</div>
 			</div>
 			<div class="col-3">	
@@ -99,7 +106,7 @@ $total_professores = $array_professores[0];
 				    <h5 class="card-title" style="font-size: 36px;"><?echo $total_projetos?></h5>
 				    <p class="card-text">Projetos cadastrados.</p>
 				  </div>
-				  <div class="card-footer"><a href="#" style="color: white">Gerenciar Projetos</a></div>
+				  <div class="card-footer"><a href="gerenciar_projetos.php" style="color: white">Gerenciar Projetos</a></div>
 				</div>
 			</div>
 		</div>

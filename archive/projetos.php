@@ -51,16 +51,16 @@
 				<button data-toggle="modal" data-target="#myModalCadastro" href="#myModalCadastro" id="btnCrud">Cadastrar projeto</button>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalEditar" href="#myModalEditar" id="btnCrud">Editar projeto</button>
 			</div>
-		</div>
-		<div class="row">
+		</div> -->
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalExcluir" href="#myModalExcluir" id="btnCrud">Excluir projeto</button>
 			</div>
-		</div>
+		</div> -->
 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalRelatorioP" href="#myModalRelatorioP" id="btnCrud">Emitir Relatório</button>
@@ -253,6 +253,54 @@
 				        <label for="data_fim">Data fim</label>
 				        <input style="width: 30%" id="data_fim" type="date" name="data_fim"></input>
 				    </div>
+				    <div class="modal-body" style="padding-top: 2%">
+				        <label for="sigla_laboratorio">Laboratório</label>
+				        <select style="width: 60%" type="text" id="id_laboratorio" name="id_laboratorio">
+				        	<option value="">Selecione o Laboratório</option>
+				        	<?php
+								$conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
+								if (!$conn) {
+								    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+								    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+								    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+								    exit;
+								}
+								$query_select = "SELECT id,sigla FROM Laboratorio";
+								if ($result = $conn->query($query_select)) {
+									while ($row = $result->fetch_row()) { 
+										?>
+										<option value= <?php echo $row[0]?>><?php echo utf8_encode($row[1])?></option>
+										<?php
+									}
+								}
+							?>      					        
+				       	</select>
+				    </div>
+				    <div class="modal-body" style="padding-top: 2%">
+				        <label for="status_projeto">Status</label>
+				        <select style="width: 60%" type="text" id="id_status" name="id_status">
+				        	<option value="">Selecione o Status Atual do Projeto</option>
+				        	<?php
+								$conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
+								if (!$conn) {
+								    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+								    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+								    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+								    exit;
+								}
+								$query_select = "SELECT id,nome FROM Status";
+								if ($result = $conn->query($query_select)) {
+									while ($row = $result->fetch_row()) { 
+										?>
+										<option value=<?php echo $row[0]?>><?php echo utf8_encode($row[1])?></option>
+										<?php
+									}
+								}
+							?>      					        
+				       	</select>
+				    </div>
+				
+
 					<!--  <div class="modal-body" style="padding-top: 2%">
 				        <label for="imagem">Imagem</label>
 				        <input type="file" name="imagem"/>

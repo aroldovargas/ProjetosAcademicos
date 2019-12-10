@@ -8,7 +8,6 @@ $data_fim = $_POST["data_fim"];
 $id_laboratorio = $_POST["id_laboratorio"];
 $id_status = $_POST["id_status"];
 
-
 //Conexao com o banco de dados
 $conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
 if (!$conn) {
@@ -48,13 +47,19 @@ if($id_status == "" || $id_status == null || $nome == "" || $nome == null || $de
 			$select = mysqli_query($conn,$query_select);
 			$array = mysqli_fetch_array($select);
 			$id_projeto = $array['id'];
-			$sql = "INSERT INTO desenvolvido(fk_Projeto_id,fk_Laboratorio_id) VALUES ('$id_projeto','$id_laboratorio')";
-			$insert = mysqli_query($conn,$sql);
-		    	
-	     	header("Location:projetos.php");
+			$sql2 = "INSERT INTO desenvolvido(fk_Projeto_id,fk_Laboratorio_id) VALUES ('$id_projeto','$id_laboratorio')";
+			$insert2 = mysqli_query($conn,$sql2);
+		    if($insert2){
+		    	echo"<script language='javascript' type='text/javascript'>
+		    	alert('Projeto cadastrado com sucesso!');</script>";
+				echo"<script language= 'JavaScript'>location.href='/archive/projetos.php'</script>";
+		    }
 
-	    }else{
-	    	header("Location:erro.html");
+
+	    }else{			    	
+    		echo"<script language='javascript' type='text/javascript'>
+	    	alert('Não foi possível cadastrar um novo projeto, verifique suas permissões!');</script>";
+			echo"<script language= 'JavaScript'>location.href='/archive/projetos.php'</script>";
 	    }
 	  }
     }

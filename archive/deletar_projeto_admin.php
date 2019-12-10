@@ -1,7 +1,6 @@
 <?php
 session_start();
 $id_projeto = $_POST["id_projeto"];
-
 //Conexao com o banco de dados
 $conn = mysqli_connect('mysql', 'root', '123.456','db_projetosAcademicos');
 if (!$conn) {
@@ -14,7 +13,7 @@ if (!$conn) {
 if($id_projeto == "" || $id_projeto == null ){
 	echo"<script language='javascript' type='text/javascript'>
     alert('Favor preencher todos os campos');</script>";
-    echo"<script language= 'JavaScript'>location.href='/archive/projetos.php'</script>";
+    echo"<script language= 'JavaScript'>location.href='/archive/gerenciar_projetos.php'</script>";
 	}else{
 
 		// $query_select = "SELECT id FROM Projeto WHERE id = '$id_projeto'";
@@ -31,16 +30,16 @@ if($id_projeto == "" || $id_projeto == null ){
 			if($delete && $delete1){
 				echo"<script language='javascript' type='text/javascript'>
 			    alert('PROJETO EXCLUIDO COM SUCESSO');</script>";
-		    	echo"<script language= 'JavaScript'>location.href='/archive/projetos.php'</script>";
+		    	echo"<script language= 'JavaScript'>location.href='/archive/gerenciar_projetos.php'</script>";
 			}else{
 				echo"<script language='javascript' type='text/javascript'>
 			    alert('NÃO FOI POSSÍVEL EXCLUIR O PROJETO, TENTE NOVAMENTE E VERIFIQUE SUAS PERMISSÕES');</script>";
-		    	echo"<script language= 'JavaScript'>location.href='/archive/projetos.php'</script>";
+		    	echo"<script language= 'JavaScript'>location.href='/archive/gerenciar_projetos.php'</script>";
 			}
 		}else{
 			echo"<script language='javascript' type='text/javascript'>
 		    alert('Esse Projeto não existe');</script>";
-	    	echo"<script language= 'JavaScript'>location.href='/archive/projetos.php'</script>";
+	    	echo"<script language= 'JavaScript'>location.href='/archive/gerenciar_projetos.php'</script>";
 		}
   	}
     

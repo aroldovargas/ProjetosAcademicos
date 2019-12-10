@@ -110,6 +110,7 @@ mysqli_close($conn);
 						while ($row = $result->fetch_row()) {
 							//pegando nome laboratorio
 							$id_laboratorio = $row[3];
+							
 							$query_idLab = "SELECT nome_lab FROM Laboratorio WHERE id = '$id_laboratorio'";
 							$select = mysqli_query($conn,$query_idLab);
 							$array = mysqli_fetch_array($select);

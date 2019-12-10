@@ -77,16 +77,16 @@ mysqli_close($conn);
 				<button data-toggle="modal" data-target="#myModalCadastro" href="#myModalCadastro" id="btnCrud">Cadastrar projeto</button>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalEditar" href="#myModalEditar" id="btnCrud">Editar projeto</button>
 			</div>
-		</div>
-		<div class="row">
+		</div> -->
+<!-- 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalExcluir" href="#myModalExcluir" id="btnCrud">Excluir projeto</button>
 			</div>
-		</div>
+		</div> -->
 		<div class="row">
 			<div class="col" align="right">
 				<button data-toggle="modal" data-target="#myModalRelatorioP" href="#myModalRelatorioP" id="btnCrud">Emitir Relatório</button>
